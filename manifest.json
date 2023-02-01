@@ -1,0 +1,24 @@
+{
+  "name": "Tweet Explainer",
+  "version": "0.1.0",
+  "description": "Draft Tweet explaination with GPT3",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://twitter.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Tweet Explainer",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "assets/logo.png"
+    }
+  },
+  "manifest_version": 3
+}
